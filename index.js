@@ -13,7 +13,7 @@ app.get('/visualizar',(req,res)=>{
 
 app.get('/params/:id',(req,res)=>{
     const {id} = req.params;
-    console.log(id)
+    res.send(id)
 })
 
 app.post('/cadastro',(req,res)=>{
@@ -25,5 +25,3 @@ app.post('/cadastro',(req,res)=>{
 app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)
 })
-
-console.log("thau")
