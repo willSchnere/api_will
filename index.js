@@ -37,6 +37,14 @@ app.delete('/delete/:id',(req,res)=>{
 app.put('/update/:id',(req,res)=>{
     const {id} =req.params;
     const {name,age} = req.body
-    const index =personList.find(index,1)
-    res.send(`Lista atualizada ${personList}`)
+    const index =parseInt(id)
+
+    res.send(id)
+
+    if(index >=0 && index < personList.length){
+        personList[index] = {name,age}
+        res.send(`Usuário ${id} atualizar com sucesso`)
+    }else{
+        res.send('Usuário não encontrado')
+    }
 })
