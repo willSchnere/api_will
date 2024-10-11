@@ -131,9 +131,9 @@ app.get('/veiculos/ano/:ano', (req, res) => {
 });
 
 // selecionar todos os veículos da cor AZUL
-app.get('/veiculos/cor/branco', (req, res) => {
+app.get('/veiculos/cor/azul', (req, res) => {
     db.query(
-        `select * from veiculos where cor = "branco"`,
+        `select * from veiculos where cor = "azul"`,
         function(err,results,fields){
             if(err){
                 console.error('Erro para puxar',err);
